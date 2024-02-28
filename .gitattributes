@@ -1,2 +1,3 @@
 build/* linguist-language=Java
-
+*.java linguist-language=Java
+directory/** linguist-language=Java
