@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Monster.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">scaffold</a> &gt; <a href="index.source.html" class="el_package">WizardTD</a> &gt; <span class="el_source">Monster.java</span></div><h1>Monster.java</h1><pre class="source lang-java linenums">package WizardTD;
+import processing.core.PApplet;
+import WizardTD.MonsterWaveManager;
+import WizardTD.Wave;
+import java.util.*;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+import java.util.Stack;
+
+import org.checkerframework.checker.units.qual.s;
+
+import java.awt.image.BufferedImage;
+import WizardTD.App;
+import WizardTD.MonsterPathfinder.Point;
+import WizardTD.Wave;
+
+import processing.core.PApplet;
+import processing.core.PApplet;
+import processing.core.PImage;
+import processing.data.JSONArray;
+import processing.data.JSONObject;
+import processing.event.MouseEvent;
+
+public class Monster {
+    
+    private float hp;
+    private int speed;
+    private float armour;
+    private int mana_gained_on_kill;
+    private int quantity;
+    private String name;
+    private List&lt;Point&gt; MonsterPath;
+    private int MonsterX;
+    private int MonsterY;
+<span class="fc" id="L40">    private int pathIndex = 0;</span>
+    private PImage monsterpic;
+    private int i;
+    //Monster movement
+    private boolean isAlive;
+    private boolean isexist;
+    private boolean deathImagestime;
+    private List&lt;PImage&gt; deathImages;
+    int deathImagesFrame;
+    private float maxHP;
+<span class="fc" id="L50">    public Monster(float hp,int speed,float armour,int mana_gained_on_kill,int quantity,String name) {</span>
+<span class="fc" id="L51">        this.hp=hp;</span>
+<span class="fc" id="L52">        this.maxHP=hp;</span>
+<span class="fc" id="L53">        this.speed=speed;</span>
+<span class="fc" id="L54">        this.armour=armour;</span>
+<span class="fc" id="L55">        this.mana_gained_on_kill=mana_gained_on_kill;</span>
+<span class="fc" id="L56">        this.quantity=quantity;</span>
+<span class="fc" id="L57">        this.name=name;</span>
+<span class="fc" id="L58">        this.isAlive=true;</span>
+<span class="fc" id="L59">        this.isexist=true;</span>
+<span class="fc" id="L60">        this.deathImagestime=false;</span>
+<span class="fc" id="L61">        this.deathImages=new ArrayList&lt;PImage&gt;();</span>
+<span class="fc" id="L62">        this.i=0;</span>
+
+<span class="fc" id="L64">    }</span>
+    public void reset(){
+<span class="fc" id="L66">        this.pathIndex=0;</span>
+<span class="fc" id="L67">        this.isAlive=true;</span>
+<span class="fc" id="L68">        this.isexist=true;</span>
+<span class="fc" id="L69">        this.deathImagestime=false;</span>
+
+<span class="fc" id="L71">    }</span>
+    public int getMonsterX() {
+<span class="fc" id="L73">        return MonsterX;</span>
+    }
+    public int getindex(){
+<span class="nc" id="L76">        return pathIndex;</span>
+    }
+    public int getMonsterY() {
+<span class="fc" id="L79">        return MonsterY;</span>
+    }
+    public float getMaxHP() {
+<span class="nc" id="L82">        return maxHP;</span>
+    }
+    public void setMaxHP(float maxHP) {
+<span class="nc" id="L85">        this.maxHP = maxHP;</span>
+<span class="nc" id="L86">    }</span>
+    public boolean getisAlive() {
+<span class="nc" id="L88">        return isAlive;</span>
+    }
+    public PImage getMonsterpic() {
+<span class="nc" id="L91">        return monsterpic;</span>
+    }
+    public void setMonsterX(int MonsterX) {
+<span class="fc" id="L94">        this.MonsterX = MonsterX;</span>
+<span class="fc" id="L95">    }</span>
+    public String getMonsterposition() {
+<span class="fc" id="L97">        return MonsterX+&quot; &quot;+MonsterY;</span>
+    }
+    public void setMonsterY(int MonsterY) {
+<span class="fc" id="L100">        this.MonsterY = MonsterY;</span>
+<span class="fc" id="L101">    }</span>
+    public void setMonsterpic(PImage monsterpic) {
+<span class="fc" id="L103">        this.monsterpic = monsterpic;</span>
+<span class="fc" id="L104">    }</span>
+    public void setMonsterPath(List&lt;Point&gt; MonsterPath) {
+<span class="fc" id="L106">        this.MonsterPath = MonsterPath;</span>
+<span class="fc" id="L107">    }</span>
+    public List&lt;Point&gt; getMonsterPath() {
+<span class="fc" id="L109">        return MonsterPath;</span>
+    }
+    public void setHp(float hp) {
+<span class="nc" id="L112">        this.hp = hp;</span>
+<span class="nc" id="L113">    }</span>
+    public void setSpeed(int speed) {
+<span class="nc" id="L115">        this.speed = speed;</span>
+<span class="nc" id="L116">    }</span>
+    public void setArmour(float armour) {
+<span class="nc" id="L118">        this.armour = armour;</span>
+<span class="nc" id="L119">    }</span>
+    public void setMana_gained_on_kill(int mana_gained_on_kill) {
+<span class="nc" id="L121">        this.mana_gained_on_kill = mana_gained_on_kill;</span>
+<span class="nc" id="L122">    }</span>
+    public void setQuantity(int quantity) {
+<span class="nc" id="L124">        this.quantity = quantity;</span>
+<span class="nc" id="L125">    }</span>
+    public float getHp() {
+<span class="fc" id="L127">        return hp;</span>
+    }
+    public int getSpeed() {
+<span class="fc" id="L130">        return speed;</span>
+    }
+    public float getArmour() {
+<span class="fc" id="L133">        return armour;</span>
+    }
+    public int getMana_gained_on_kill() {
+<span class="fc" id="L136">        return mana_gained_on_kill;</span>
+    }
+    public int getQuantity() {
+<span class="fc" id="L139">        return quantity;</span>
+    }
+    public void checkAlive() {
+<span class="fc bfc" id="L142" title="All 2 branches covered.">        if (hp&lt;=0) {</span>
+<span class="fc" id="L143">            this.isAlive=false;</span>
+        }
+<span class="fc" id="L145">    }</span>
+    public String getname() {
+<span class="fc" id="L147">        return name;</span>
+    }
+    public void MoveToTarget() {
+<span class="pc bpc" id="L150" title="1 of 2 branches missed.">        if (this.pathIndex &lt; this.MonsterPath.size() ) {</span>
+            // 鑾峰彇 Monster 鐨勫綋鍓嶇洰鏍囩偣
+<span class="fc" id="L152">            Point targetPoint = this.MonsterPath.get(this.pathIndex);</span>
+            // 璁＄畻 Monster 鍦� x 鍜� y 鏂瑰悜涓婄殑绉诲姩鏂瑰悜
+<span class="fc" id="L154">            int dx = (int) Math.signum(targetPoint.x - MonsterX);</span>
+<span class="fc" id="L155">            int dy = (int) Math.signum(targetPoint.y - MonsterY);</span>
+            // 鏇存柊 Monster 鐨勫潗鏍囷紝姣忓抚绉诲姩 moveSpeed 鍍忕礌
+<span class="fc" id="L157">            this.MonsterX += dx * speed;</span>
+<span class="fc" id="L158">            this.MonsterY += dy * speed;</span>
+            // 濡傛灉 Monster 鍒拌揪鐩爣鐐癸紝绉诲姩鍒颁笅涓�涓洰鏍囩偣
+<span class="fc bfc" id="L160" title="All 4 branches covered.">            if (this.MonsterX == targetPoint.x &amp;&amp; this.MonsterY == targetPoint.y) {</span>
+<span class="fc" id="L161">                pathIndex++;</span>
+                
+<span class="pc bpc" id="L163" title="1 of 4 branches missed.">            if(this.MonsterX==this.MonsterPath.get(this.MonsterPath.size()-1).x&amp;&amp;this.MonsterY==this.MonsterPath.get(this.MonsterPath.size()-1).y){</span>
+<span class="fc" id="L164">                this.isexist=false;</span>
+                
+            }
+
+
+            }
+        }
+<span class="fc" id="L171">    }</span>
+    public boolean isexist() {
+<span class="fc" id="L173">        return isexist;</span>
+    }
+    public boolean isAlive() {
+<span class="fc" id="L176">        return isAlive;</span>
+    }
+    public void minusMonsterhealth(int hp) {
+<span class="fc" id="L179">        this.hp -= hp;</span>
+<span class="fc" id="L180">    }</span>
+    public void setdeathImages(List&lt;PImage&gt; deathImages) {
+<span class="fc" id="L182">        this.deathImages = deathImages;</span>
+<span class="fc" id="L183">    }</span>
+    public int getdeathImagessize() {
+<span class="fc" id="L185">        return deathImages.size()-1;</span>
+    }
+    public int getdeathImagesi() {
+<span class="fc" id="L188">        return i;</span>
+    }
+    public void setdeathImages(int i) {
+<span class="fc" id="L191">        this.i = i;</span>
+<span class="fc" id="L192">    }</span>
+    public PImage getdeathImages() {
+<span class="nc bnc" id="L194" title="All 2 branches missed.">        if (i&lt;deathImages.size()-1) {</span>
+<span class="nc" id="L195">            deathImagesFrame++;</span>
+        }
+<span class="nc bnc" id="L197" title="All 2 branches missed.">        if(deathImagesFrame==4){</span>
+<span class="nc" id="L198">            i++;</span>
+<span class="nc" id="L199">            deathImagesFrame=0;</span>
+        }
+<span class="nc" id="L201">        return deathImages.get(i);</span>
+        
+    }
+    public boolean getdeathImagestime() {
+<span class="fc" id="L205">        return deathImagestime;</span>
+    }
+    public void setdeathImagestime(){
+<span class="fc" id="L208">        this.deathImagestime=true;</span>
+<span class="fc" id="L209">    }</span>
+    public int getdeathImagesFrame() {
+<span class="nc" id="L211">        return deathImagesFrame;</span>
+    }
+
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>

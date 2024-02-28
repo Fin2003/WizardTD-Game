@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="WizardTD.ManaTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2023-10-27T08:55:01" hostname="PC-20230508SKGP" time="0.003">
+  <properties/>
+  <testcase name="testUpgradeManapool()" classname="WizardTD.ManaTest" time="0.0"/>
+  <testcase name="testAddMana()" classname="WizardTD.ManaTest" time="0.0"/>
+  <testcase name="testAddManaEdge()" classname="WizardTD.ManaTest" time="0.001"/>
+  <testcase name="testUpgradeManapoolEdge()" classname="WizardTD.ManaTest" time="0.0"/>
+  <testcase name="testupManaPersecond()" classname="WizardTD.ManaTest" time="0.0"/>
+  <testcase name="testRemoveMana()" classname="WizardTD.ManaTest" time="0.001"/>
+  <testcase name="testAddManaEdge2()" classname="WizardTD.ManaTest" time="0.0"/>
+  <testcase name="testRemoveManaEdge2()" classname="WizardTD.ManaTest" time="0.0"/>
+  <testcase name="testSetManaEdge()" classname="WizardTD.ManaTest" time="0.0"/>
+  <testcase name="testRemoveManaEdge()" classname="WizardTD.ManaTest" time="0.0"/>
+  <testcase name="testSetMana()" classname="WizardTD.ManaTest" time="0.0"/>
+  <testcase name="testSetManaEdge2()" classname="WizardTD.ManaTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

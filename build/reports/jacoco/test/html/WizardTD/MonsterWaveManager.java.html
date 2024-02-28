@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MonsterWaveManager.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">scaffold</a> &gt; <a href="index.source.html" class="el_package">WizardTD</a> &gt; <span class="el_source">MonsterWaveManager.java</span></div><h1>MonsterWaveManager.java</h1><pre class="source lang-java linenums">package WizardTD;
+
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
+
+
+public class MonsterWaveManager {
+    private Queue&lt;Wave&gt; waveQueue; // 娉㈡闃熷垪
+    private List&lt;Monster&gt; monsters; // 瀛樻椿鐨勬�墿鍒楄〃
+    private int waveTimer; // 娉㈡璁℃椂鍣�
+    private double reactionTime; // 鍙嶅簲鏃堕棿璁℃椂鍣�
+    private boolean reactionTimeActive; // 鏄惁澶勪簬鍙嶅簲鏃堕棿鐘舵��
+    private Wave currentWave; // 褰撳墠娉㈡
+
+    private boolean end;
+<span class="fc" id="L20">    public MonsterWaveManager() {</span>
+<span class="fc" id="L21">        waveQueue = new LinkedList&lt;&gt;();</span>
+<span class="fc" id="L22">        monsters = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L23">        waveTimer = 0;</span>
+<span class="fc" id="L24">        reactionTime = 0;</span>
+<span class="fc" id="L25">        reactionTimeActive = false;</span>
+<span class="fc" id="L26">        end=false;</span>
+<span class="fc" id="L27">    }</span>
+    public void setend(){
+<span class="fc" id="L29">        this.end=true;</span>
+<span class="fc" id="L30">    }</span>
+    public boolean getend(){
+<span class="fc" id="L32">        return end;</span>
+    }
+    public Queue&lt;Wave&gt; getWaveQueue() {
+<span class="fc" id="L35">        return waveQueue;</span>
+    }
+    public void addWave(Wave wave) {
+<span class="fc" id="L38">        waveQueue.offer(wave);</span>
+<span class="fc" id="L39">    }</span>
+
+    public List&lt;Monster&gt; getMonsters() {
+        // 娓呯┖涔嬪墠鐨勫瓨娲绘�墿鍒楄〃
+<span class="nc" id="L43">        monsters.clear();</span>
+        
+        // 閬嶅巻娉㈡闃熷垪锛岃幏鍙栨瘡涓尝娆′腑鐨勬�墿
+<span class="nc bnc" id="L46" title="All 2 branches missed.">        for (Wave wave : waveQueue) {</span>
+<span class="nc bnc" id="L47" title="All 2 branches missed.">            for (int i = 0; i &lt; wave.getMonsterSize(); i++) {</span>
+<span class="nc" id="L48">                monsters.add(wave.getMonster(i));</span>
+            }
+<span class="nc" id="L50">        }</span>
+
+<span class="nc" id="L52">        return monsters;</span>
+    }
+
+    public void switchToNextWave() {
+<span class="pc bpc" id="L56" title="1 of 2 branches missed.">        if (!waveQueue.isEmpty()) {</span>
+<span class="fc" id="L57">            currentWave = waveQueue.poll();</span>
+            // 璁℃椂鍣ㄩ噸缃负闆�
+<span class="fc" id="L59">            waveTimer = 0;</span>
+<span class="fc" id="L60">            reactionTime = currentWave.getPre_wave_pause()*60; // 璁剧疆鍙嶅簲鏃堕棿涓烘尝娆＄殑鏆傚仠鏃堕暱</span>
+<span class="fc" id="L61">            reactionTimeActive = true;</span>
+        } else {
+            // 鎵�鏈夋尝娆″凡缁忕粨鏉�
+<span class="nc" id="L64">            currentWave = null;</span>
+        }
+<span class="fc" id="L66">    }</span>
+
+    public boolean isWaveActive() {
+<span class="nc bnc" id="L69" title="All 2 branches missed.">        return !waveQueue.isEmpty();</span>
+    }
+
+    public boolean isReactionTimeActive() {
+<span class="nc" id="L73">        return reactionTimeActive;</span>
+    }
+
+    public Wave getCurrentWave() {
+<span class="pc bpc" id="L77" title="1 of 2 branches missed.">        if (!waveQueue.isEmpty()) {</span>
+<span class="fc" id="L78">            return waveQueue.peek(); // 杩斿洖褰撳墠娉㈡</span>
+        }
+<span class="nc" id="L80">        return null;</span>
+    }
+    public double getreactiontime(){
+<span class="nc" id="L83">        return reactionTime;</span>
+    }
+    public boolean hasWavesRemaining() {
+<span class="nc bnc" id="L86" title="All 2 branches missed.">        return !waveQueue.isEmpty();</span>
+    }
+    public Wave getWaveinquWave(int i){
+<span class="fc" id="L89">        return waveQueue.toArray(new Wave[waveQueue.size()])[i];</span>
+    }
+    public boolean hasnexwave(){
+<span class="fc bfc" id="L92" title="All 2 branches covered.">        return waveQueue.size()&gt;1;</span>
+    }
+    public boolean thelastwave(){
+<span class="fc bfc" id="L95" title="All 2 branches covered.">        return waveQueue.size()&lt;=1;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>

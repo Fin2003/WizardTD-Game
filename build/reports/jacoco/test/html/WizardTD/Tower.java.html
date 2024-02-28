@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Tower.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">scaffold</a> &gt; <a href="index.source.html" class="el_package">WizardTD</a> &gt; <span class="el_source">Tower.java</span></div><h1>Tower.java</h1><pre class="source lang-java linenums">package WizardTD;
+import processing.core.PApplet;
+import WizardTD.MonsterWaveManager;
+import WizardTD.Wave;
+import java.util.*;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+import java.util.Stack;
+
+import org.checkerframework.checker.units.qual.s;
+
+import java.awt.image.BufferedImage;
+import WizardTD.App;
+import WizardTD.MonsterPathfinder.Point;
+import WizardTD.Wave;
+
+import processing.core.PApplet;
+import processing.core.PApplet;
+import processing.core.PImage;
+import processing.data.JSONArray;
+import processing.data.JSONObject;
+import processing.event.MouseEvent;
+public class Tower {
+    private float damagerange;
+    private int damage;
+    private double speed;
+    private int rangelevel;
+    private int damagelevel;
+    private int speedlevel;
+    private int towerx;
+    private int towery;
+    private List&lt;Monster&gt; monsters;
+    private int initial_tower_damage;
+    private int level;
+    private int cooldowncount;
+    private List&lt;Fireball&gt; fireballs;
+
+<span class="fc" id="L43">    public Tower(float damagerange,double speed,int damage, Point position) {</span>
+<span class="fc" id="L44">        this.cooldowncount=0;</span>
+<span class="fc" id="L45">        this.level=0;</span>
+<span class="fc" id="L46">        this.rangelevel=0;</span>
+<span class="fc" id="L47">        this.damagelevel=0;</span>
+<span class="fc" id="L48">        this.speedlevel=0;</span>
+<span class="fc" id="L49">        this.initial_tower_damage=damage;</span>
+<span class="fc" id="L50">        this.speed=speed;</span>
+<span class="fc" id="L51">        this.damage=damage;</span>
+<span class="fc" id="L52">        this.damagerange=damagerange;</span>
+<span class="fc" id="L53">        Point towerposition = new Point(position.x,position.y);</span>
+<span class="fc" id="L54">        this.towerx=towerposition.x;</span>
+<span class="fc" id="L55">        this.towery=towerposition.y;</span>
+<span class="fc" id="L56">        this.monsters = new ArrayList&lt;Monster&gt;();</span>
+<span class="fc" id="L57">        this.fireballs = new ArrayList&lt;Fireball&gt;();</span>
+<span class="fc" id="L58">    }</span>
+    public void cooldowncount(){
+<span class="fc" id="L60">        this.cooldowncount++;</span>
+<span class="fc" id="L61">    }</span>
+    public void addFireball(Fireball fireball){
+<span class="fc" id="L63">        this.fireballs.add(fireball);</span>
+<span class="fc" id="L64">    }</span>
+    public List&lt;Fireball&gt; getFireballs(){
+<span class="fc" id="L66">        return this.fireballs;</span>
+    }
+    public void removeFireball(Fireball fireball){
+<span class="fc" id="L69">        this.fireballs.remove(fireball);</span>
+<span class="fc" id="L70">    }</span>
+    public boolean getcooldown(){
+<span class="fc bfc" id="L72" title="All 2 branches covered.">        return cooldowncount==(int)Math.round(60.00/this.speed);</span>
+    }
+    public void resetcooldown(){
+<span class="fc" id="L75">        this.cooldowncount=0;</span>
+<span class="fc" id="L76">    }</span>
+    public int getDamageLevel() {
+<span class="fc" id="L78">        return this.damagelevel;</span>
+    }
+    public int getRangeLevel() {
+<span class="fc" id="L81">        return this.rangelevel;</span>
+    }
+    public int getSpeedLevel() {
+<span class="fc" id="L84">        return this.speedlevel;</span>
+    }
+    
+    public void updamage() {
+<span class="fc" id="L88">        this.damagelevel++;</span>
+<span class="fc" id="L89">        this.damage+=(this.initial_tower_damage/2);</span>
+<span class="fc" id="L90">    }</span>
+    public void upspeed() {
+<span class="fc" id="L92">        this.speedlevel++;</span>
+<span class="fc" id="L93">        this.speed+=0.5;</span>
+<span class="fc" id="L94">    }</span>
+    public void uprange() {
+<span class="fc" id="L96">        this.rangelevel++;</span>
+<span class="fc" id="L97">        this.damagerange+=32;</span>
+<span class="fc" id="L98">    }</span>
+
+    public int getLevel() {
+<span class="pc bpc" id="L101" title="1 of 2 branches missed.">        if(this.level&gt;=2){</span>
+<span class="nc" id="L102">            this.level=2;</span>
+<span class="nc" id="L103">            return this.level;</span>
+        }
+<span class="pc bpc" id="L105" title="2 of 6 branches missed.">        while(this.damagelevel&gt;=1&amp;&amp;this.rangelevel&gt;=1&amp;&amp;this.speedlevel&gt;=1)</span>
+        {
+<span class="fc" id="L107">            this.level++;</span>
+<span class="fc" id="L108">            this.rangelevel-=1;</span>
+<span class="fc" id="L109">            this.damagelevel-=1;</span>
+<span class="fc" id="L110">            this.speedlevel-=1;</span>
+        }
+<span class="fc" id="L112">        return this.level;</span>
+    }
+
+    public int getDamage() {
+<span class="fc" id="L116">        return this.damage;</span>
+    }
+    public float getDamagerange() {
+<span class="fc" id="L119">        return this.damagerange/32;</span>
+    }
+    public int getTowerX() {
+<span class="fc" id="L122">        return this.towerx;</span>
+    }
+    public int getTowerY() {
+<span class="fc" id="L125">        return this.towery;</span>
+    }
+    public void addMonsterInRange(Monster monsterinput) {
+<span class="fc bfc" id="L128" title="All 2 branches covered.">        if(!monsters.contains(monsterinput)) {</span>
+<span class="fc" id="L129">            monsters.add(monsterinput);</span>
+        }
+<span class="fc" id="L131">    }</span>
+    
+    public void removeMonsterInRange(Monster monsterinput) {
+<span class="pc bpc" id="L134" title="1 of 2 branches missed.">        if(monsters.contains(monsterinput)) {</span>
+<span class="fc" id="L135">            monsters.remove(monsterinput);</span>
+        }
+<span class="fc" id="L137">    }</span>
+    public List&lt;Monster&gt; getMonsterInrange(){
+<span class="fc" id="L139">        return this.monsters;</span>
+    }
+
+    public Monster getrandMonster() {
+<span class="fc" id="L143">        int rand = (int)(Math.random()*monsters.size());</span>
+<span class="fc" id="L144">        return monsters.get(rand);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>

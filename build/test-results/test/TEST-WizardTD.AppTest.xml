@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="WizardTD.AppTest" tests="23" skipped="0" failures="0" errors="0" timestamp="2023-10-27T08:55:00" hostname="PC-20230508SKGP" time="0.505">
+  <properties/>
+  <testcase name="testbotton()" classname="WizardTD.AppTest" time="0.417"/>
+  <testcase name="testdrawFireballEdge()" classname="WizardTD.AppTest" time="0.016"/>
+  <testcase name="testMonstertotower()" classname="WizardTD.AppTest" time="0.009"/>
+  <testcase name="testdrawtower()" classname="WizardTD.AppTest" time="0.001"/>
+  <testcase name="testreset()" classname="WizardTD.AppTest" time="0.001"/>
+  <testcase name="testsetup()" classname="WizardTD.AppTest" time="0.03"/>
+  <testcase name="TestTowerUpgrade()" classname="WizardTD.AppTest" time="0.003"/>
+  <testcase name="TestTowerUpgrade2()" classname="WizardTD.AppTest" time="0.002"/>
+  <testcase name="testCreatewaves()" classname="WizardTD.AppTest" time="0.002"/>
+  <testcase name="testwavegen()" classname="WizardTD.AppTest" time="0.002"/>
+  <testcase name="testdrawFireball()" classname="WizardTD.AppTest" time="0.001"/>
+  <testcase name="createtower()" classname="WizardTD.AppTest" time="0.001"/>
+  <testcase name="testupgradeUI()" classname="WizardTD.AppTest" time="0.001"/>
+  <testcase name="testdrawmap()" classname="WizardTD.AppTest" time="0.001"/>
+  <testcase name="testkeypressed()" classname="WizardTD.AppTest" time="0.001"/>
+  <testcase name="testupdateMonster2()" classname="WizardTD.AppTest" time="0.001"/>
+  <testcase name="TestupdateMonster()" classname="WizardTD.AppTest" time="0.003"/>
+  <testcase name="testupdateMonster()" classname="WizardTD.AppTest" time="0.002"/>
+  <testcase name="testmouseReleased()" classname="WizardTD.AppTest" time="0.001"/>
+  <testcase name="TestTowerUpgradeEdge()" classname="WizardTD.AppTest" time="0.002"/>
+  <testcase name="TestupdateMonster2()" classname="WizardTD.AppTest" time="0.001"/>
+  <testcase name="TestupdateMonster3()" classname="WizardTD.AppTest" time="0.001"/>
+  <testcase name="TestupdateMonster4()" classname="WizardTD.AppTest" time="0.002"/>
+  <system-out><![CDATA[erererererer
+damage up
+this time buy20
+leave: 980
+speed up
+range up
+this time buy40
+leave: 960
+monstergenList.isEmpty
+switch to next wave
+switch to next wave
+speed up
+this time buy20
+leave: 980
+this time buy100
+leave: 880
+here
+second level
+speed up
+range up
+this time buy40
+leave: 960
+speed up
+range up
+this time buy60
+leave: 900
+speed up
+range up
+this time buy80
+leave: 820
+this time buy0
+leave: 820
+this time buy0
+leave: 820
+this time buy0
+leave: 820
+this time buy0
+leave: 820
+this time buy0
+leave: 820
+damage up
+this time buy20
+leave: 800
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

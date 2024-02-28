@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Fireball.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">scaffold</a> &gt; <a href="index.source.html" class="el_package">WizardTD</a> &gt; <span class="el_source">Fireball.java</span></div><h1>Fireball.java</h1><pre class="source lang-java linenums">package WizardTD;
+import processing.core.PApplet;
+import WizardTD.MonsterWaveManager;
+import WizardTD.Wave;
+import java.util.*;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+import java.util.Stack;
+
+import org.checkerframework.checker.units.qual.s;
+
+import java.awt.image.BufferedImage;
+import WizardTD.App;
+import WizardTD.MonsterPathfinder.Point;
+import WizardTD.Wave;
+
+import processing.core.PApplet;
+import processing.core.PApplet;
+import processing.core.PImage;
+import processing.data.JSONArray;
+import processing.data.JSONObject;
+import processing.event.MouseEvent;
+public class Fireball {
+    private int x;
+    private int y;
+    private boolean isHit;
+    private Monster monster;
+    private Tower tower;
+
+<span class="fc" id="L35">    public Fireball(Tower tower) {</span>
+<span class="fc" id="L36">        this.tower=tower;</span>
+<span class="fc" id="L37">        this.x=tower.getTowerX()+15;</span>
+<span class="fc" id="L38">        this.y=tower.getTowerY()+15;</span>
+<span class="fc" id="L39">        this.isHit=false;</span>
+<span class="fc" id="L40">    }</span>
+    public Tower getTower(){
+<span class="fc" id="L42">        return this.tower;</span>
+    }
+    public int getX(){
+<span class="nc" id="L45">        return this.x;</span>
+    }
+    public int getY(){
+<span class="nc" id="L48">        return this.y;</span>
+    }
+    public void updateX(int x){
+<span class="nc" id="L51">        this.x=x;</span>
+<span class="nc" id="L52">    }</span>
+    public void updateY(int y){
+<span class="nc" id="L54">        this.y=y;</span>
+<span class="nc" id="L55">    }</span>
+    public void setMonster(Monster monster){
+<span class="fc" id="L57">        this.monster=monster;</span>
+<span class="fc" id="L58">    }</span>
+    public Monster getMonster(){
+<span class="fc" id="L60">        return this.monster;</span>
+    }
+    public int getTargetX(){
+<span class="fc" id="L63">        return this.monster.getMonsterX();</span>
+    }
+    public int getTargetY(){
+<span class="fc" id="L66">        return this.monster.getMonsterY();</span>
+    }
+    public void track(int targetx,int targety){
+<span class="fc" id="L69">        float dx = targetx - x;</span>
+<span class="fc" id="L70">        float dy = targety - y;</span>
+        
+        // 璁＄畻鍒扮洰鏍囩殑鎬昏窛绂�
+<span class="fc" id="L73">        float distance=PApplet.dist(x, y, targetx, targety);</span>
+        // 璁＄畻鍗曚綅鍚戦噺
+<span class="fc" id="L75">        float unitX = dx / distance;</span>
+<span class="fc" id="L76">        float unitY = dy / distance;</span>
+        
+        // 璁＄畻姣忔搴旇绉诲姩鐨勮窛绂伙紙杩欓噷鏄�5鍍忕礌锛�
+<span class="fc" id="L79">        float moveX = unitX * 5;</span>
+<span class="fc" id="L80">        float moveY = unitY * 5;</span>
+        
+        // 濡傛灉璺濈澶т簬5锛屾甯哥Щ鍔紱鍚﹀垯锛岀洿鎺ュ埌杈剧洰鏍�
+<span class="fc bfc" id="L83" title="All 2 branches covered.">        if (distance &gt; 5) {</span>
+<span class="fc" id="L84">            x += moveX;</span>
+<span class="fc" id="L85">            y += moveY;</span>
+        } else {
+<span class="fc" id="L87">            x = targetx;</span>
+<span class="fc" id="L88">            y = targety;</span>
+<span class="fc" id="L89">            isHit = true;</span>
+        }
+<span class="fc" id="L91">    }</span>
+    public boolean isHit(){
+<span class="fc" id="L93">        return this.isHit;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>

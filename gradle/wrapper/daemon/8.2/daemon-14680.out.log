@@ -1,0 +1,853 @@
+2023-10-27T21:05:45.560+1100 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonMain] Assuming the daemon was started with following jvm opts: [-XX:MaxMetaspaceSize=384m, -XX:+HeapDumpOnOutOfMemoryError, -Xms256m, -Xmx512m, -Dfile.encoding=GBK, -Duser.country=CN, -Duser.language=zh, -Duser.variant]
+2023-10-27T21:05:45.647+1100 [DEBUG] [org.gradle.internal.nativeintegration.services.NativeServices] Native-platform posix files integration is not available. Continuing with fallback.
+2023-10-27T21:05:45.660+1100 [INFO] [org.gradle.launcher.daemon.server.Daemon] start() called on daemon - DefaultDaemonContext[uid=f273e8c6-1ff1-4077-b09e-14fec1136821,javaHome=C:\Users\Glroy\.jdks\corretto-1.8.0_382,daemonRegistryDir=C:\Users\Glroy\Documents\scaffold\gradle\wrapper\daemon,pid=14680,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=GBK,-Duser.country=CN,-Duser.language=zh,-Duser.variant]
+2023-10-27T21:05:46.702+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Software Loopback Interface 1
+2023-10-27T21:05:46.705+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? true
+2023-10-27T21:05:46.705+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /127.0.0.1
+2023-10-27T21:05:46.705+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /0:0:0:0:0:0:0:1
+2023-10-27T21:05:46.706+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft 6to4 Adapter
+2023-10-27T21:05:46.708+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.708+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Intel(R) Ethernet Controller I226-V
+2023-10-27T21:05:46.710+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.710+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /10.18.34.175
+2023-10-27T21:05:46.710+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /fe80:0:0:0:fa7:f2e8:b8b6:16d0%eth0
+2023-10-27T21:05:46.711+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Kernel Debug Network Adapter
+2023-10-27T21:05:46.713+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.714+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft IP-HTTPS Platform Adapter
+2023-10-27T21:05:46.716+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.716+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Bluetooth Device (Personal Area Network)
+2023-10-27T21:05:46.719+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.719+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /fe80:0:0:0:65fd:9060:915b:aeab%eth2
+2023-10-27T21:05:46.719+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (PPTP)
+2023-10-27T21:05:46.723+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.723+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Wi-Fi Direct Virtual Adapter
+2023-10-27T21:05:46.726+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.727+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /fe80:0:0:0:8db5:b811:40b:7401%wlan0
+2023-10-27T21:05:46.727+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (IKEv2)
+2023-10-27T21:05:46.730+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.730+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (IP)
+2023-10-27T21:05:46.735+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.735+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (IPv6)
+2023-10-27T21:05:46.740+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.740+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (Network Monitor)
+2023-10-27T21:05:46.744+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.744+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Intel(R) Wi-Fi 6E AX211 160MHz
+2023-10-27T21:05:46.747+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.748+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /fe80:0:0:0:78d2:4015:b8e3:9762%wlan1
+2023-10-27T21:05:46.748+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Teredo Tunneling Adapter
+2023-10-27T21:05:46.753+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.753+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Netease UU TAP-Win32 Adapter V9.21
+2023-10-27T21:05:46.756+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.756+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /fe80:0:0:0:bda9:4efe:c131:7125%eth6
+2023-10-27T21:05:46.756+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Wi-Fi Direct Virtual Adapter #2
+2023-10-27T21:05:46.759+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.759+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /192.168.137.1
+2023-10-27T21:05:46.759+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /fe80:0:0:0:f324:9d71:9030:188a%wlan2
+2023-10-27T21:05:46.759+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface ZeroTier Virtual Port
+2023-10-27T21:05:46.761+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.761+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /172.23.54.73
+2023-10-27T21:05:46.762+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /fe80:0:0:0:cf8:9f1:8344:9ac%eth7
+2023-10-27T21:05:46.762+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (PPPOE)
+2023-10-27T21:05:46.765+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.765+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface TAP-Windows Adapter V9
+2023-10-27T21:05:46.768+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.768+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /fe80:0:0:0:af70:b051:87c7:b3e6%eth8
+2023-10-27T21:05:46.768+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (L2TP)
+2023-10-27T21:05:46.770+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.770+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (SSTP)
+2023-10-27T21:05:46.772+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.772+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface VeryKuai TAP Adapter
+2023-10-27T21:05:46.775+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.775+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /fe80:0:0:0:eb7c:324d:d0e1:b8eb%eth9
+2023-10-27T21:05:46.775+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface VeryKuai TAP Adapter-WFP Native MAC Layer LightWeight Filter-0000
+2023-10-27T21:05:46.777+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.777+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface VeryKuai TAP Adapter-Connectify LightWeight Filter-0000
+2023-10-27T21:05:46.779+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.779+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface VeryKuai TAP Adapter-VKHOST-0000
+2023-10-27T21:05:46.782+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.782+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface VeryKuai TAP Adapter-QoS Packet Scheduler-0000
+2023-10-27T21:05:46.785+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.785+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface VeryKuai TAP Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000
+2023-10-27T21:05:46.787+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.787+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Netease UU TAP-Win32 Adapter V9.21-WFP Native MAC Layer LightWeight Filter-0000
+2023-10-27T21:05:46.790+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.790+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Netease UU TAP-Win32 Adapter V9.21-Connectify LightWeight Filter-0000
+2023-10-27T21:05:46.792+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.792+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Netease UU TAP-Win32 Adapter V9.21-VKHOST-0000
+2023-10-27T21:05:46.795+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.795+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Netease UU TAP-Win32 Adapter V9.21-QoS Packet Scheduler-0000
+2023-10-27T21:05:46.797+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.797+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Netease UU TAP-Win32 Adapter V9.21-WFP 802.3 MAC Layer LightWeight Filter-0000
+2023-10-27T21:05:46.799+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.799+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface TAP-Windows Adapter V9-WFP Native MAC Layer LightWeight Filter-0000
+2023-10-27T21:05:46.802+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.802+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface TAP-Windows Adapter V9-Connectify LightWeight Filter-0000
+2023-10-27T21:05:46.804+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.804+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface TAP-Windows Adapter V9-VKHOST-0000
+2023-10-27T21:05:46.807+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.807+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface TAP-Windows Adapter V9-QoS Packet Scheduler-0000
+2023-10-27T21:05:46.809+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.809+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface TAP-Windows Adapter V9-WFP 802.3 MAC Layer LightWeight Filter-0000
+2023-10-27T21:05:46.812+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.812+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Intel(R) Ethernet Controller I226-V-WFP Native MAC Layer LightWeight Filter-0000
+2023-10-27T21:05:46.815+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.815+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Intel(R) Ethernet Controller I226-V-Connectify LightWeight Filter-0000
+2023-10-27T21:05:46.817+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.817+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Intel(R) Ethernet Controller I226-V-VKHOST-0000
+2023-10-27T21:05:46.820+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.820+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Intel(R) Ethernet Controller I226-V-QoS Packet Scheduler-0000
+2023-10-27T21:05:46.822+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.822+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Intel(R) Ethernet Controller I226-V-WFP 802.3 MAC Layer LightWeight Filter-0000
+2023-10-27T21:05:46.825+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.825+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Bluetooth Device (Personal Area Network)-Connectify LightWeight Filter-0000
+2023-10-27T21:05:46.827+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.827+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Bluetooth Device (Personal Area Network)-VKHOST-0000
+2023-10-27T21:05:46.830+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.830+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Intel(R) Wi-Fi 6E AX211 160MHz-WFP Native MAC Layer LightWeight Filter-0000
+2023-10-27T21:05:46.832+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.832+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Intel(R) Wi-Fi 6E AX211 160MHz-Virtual WiFi Filter Driver-0000
+2023-10-27T21:05:46.834+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.834+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Intel(R) Wi-Fi 6E AX211 160MHz-Native WiFi Filter Driver-0000
+2023-10-27T21:05:46.837+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.837+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Intel(R) Wi-Fi 6E AX211 160MHz-Connectify LightWeight Filter-0000
+2023-10-27T21:05:46.839+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.840+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Intel(R) Wi-Fi 6E AX211 160MHz-VKHOST-0000
+2023-10-27T21:05:46.842+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.842+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Intel(R) Wi-Fi 6E AX211 160MHz-QoS Packet Scheduler-0000
+2023-10-27T21:05:46.844+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.845+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Intel(R) Wi-Fi 6E AX211 160MHz-WFP 802.3 MAC Layer LightWeight Filter-0000
+2023-10-27T21:05:46.847+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.847+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Wi-Fi Direct Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000
+2023-10-27T21:05:46.849+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.849+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Wi-Fi Direct Virtual Adapter-Native WiFi Filter Driver-0000
+2023-10-27T21:05:46.852+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.852+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Wi-Fi Direct Virtual Adapter-Connectify LightWeight Filter-0000
+2023-10-27T21:05:46.854+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.854+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Wi-Fi Direct Virtual Adapter-VKHOST-0000
+2023-10-27T21:05:46.856+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.857+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Wi-Fi Direct Virtual Adapter-QoS Packet Scheduler-0000
+2023-10-27T21:05:46.859+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.860+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Wi-Fi Direct Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000
+2023-10-27T21:05:46.862+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.862+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (IP)-WFP Native MAC Layer LightWeight Filter-0000
+2023-10-27T21:05:46.864+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.864+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (IP)-Connectify LightWeight Filter-0000
+2023-10-27T21:05:46.867+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.867+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (IP)-VKHOST-0000
+2023-10-27T21:05:46.869+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.869+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (IP)-QoS Packet Scheduler-0000
+2023-10-27T21:05:46.871+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.872+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (IPv6)-WFP Native MAC Layer LightWeight Filter-0000
+2023-10-27T21:05:46.874+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.874+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (IPv6)-Connectify LightWeight Filter-0000
+2023-10-27T21:05:46.877+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.878+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (IPv6)-VKHOST-0000
+2023-10-27T21:05:46.881+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.881+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+2023-10-27T21:05:46.884+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.885+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (Network Monitor)-WFP Native MAC Layer LightWeight Filter-0000
+2023-10-27T21:05:46.888+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.888+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (Network Monitor)-Connectify LightWeight Filter-0000
+2023-10-27T21:05:46.891+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.891+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (Network Monitor)-VKHOST-0000
+2023-10-27T21:05:46.894+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.895+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+2023-10-27T21:05:46.897+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.897+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface ZeroTier Virtual Port-WFP Native MAC Layer LightWeight Filter-0000
+2023-10-27T21:05:46.900+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.900+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface ZeroTier Virtual Port-Connectify LightWeight Filter-0000
+2023-10-27T21:05:46.903+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.903+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface ZeroTier Virtual Port-VKHOST-0000
+2023-10-27T21:05:46.906+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.907+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface ZeroTier Virtual Port-QoS Packet Scheduler-0000
+2023-10-27T21:05:46.909+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.909+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface ZeroTier Virtual Port-WFP 802.3 MAC Layer LightWeight Filter-0000
+2023-10-27T21:05:46.912+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.912+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Wi-Fi Direct Virtual Adapter #2-WFP Native MAC Layer LightWeight Filter-0000
+2023-10-27T21:05:46.914+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.914+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Wi-Fi Direct Virtual Adapter #2-Native WiFi Filter Driver-0000
+2023-10-27T21:05:46.917+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.917+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Wi-Fi Direct Virtual Adapter #2-Connectify LightWeight Filter-0000
+2023-10-27T21:05:46.919+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.919+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Wi-Fi Direct Virtual Adapter #2-VKHOST-0000
+2023-10-27T21:05:46.921+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.921+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Wi-Fi Direct Virtual Adapter #2-QoS Packet Scheduler-0000
+2023-10-27T21:05:46.925+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.925+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Wi-Fi Direct Virtual Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000
+2023-10-27T21:05:46.928+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2023-10-27T21:05:46.930+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Listening on [e90147c8-8b89-44cb-b6ac-e4ba7743b8fa port:14903, addresses:[localhost/127.0.0.1]].
+2023-10-27T21:05:46.932+1100 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] Daemon starting at: Fri Oct 27 21:05:46 AEDT 2023, with address: [e90147c8-8b89-44cb-b6ac-e4ba7743b8fa port:14903, addresses:[localhost/127.0.0.1]]
+2023-10-27T21:05:46.932+1100 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertising the daemon address to the clients: [e90147c8-8b89-44cb-b6ac-e4ba7743b8fa port:14903, addresses:[localhost/127.0.0.1]]
+2023-10-27T21:05:46.932+1100 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertised daemon context: DefaultDaemonContext[uid=f273e8c6-1ff1-4077-b09e-14fec1136821,javaHome=C:\Users\Glroy\.jdks\corretto-1.8.0_382,daemonRegistryDir=C:\Users\Glroy\Documents\scaffold\gradle\wrapper\daemon,pid=14680,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=GBK,-Duser.country=CN,-Duser.language=zh,-Duser.variant]
+2023-10-27T21:05:46.933+1100 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon address: [e90147c8-8b89-44cb-b6ac-e4ba7743b8fa port:14903, addresses:[localhost/127.0.0.1]], context: DefaultDaemonContext[uid=f273e8c6-1ff1-4077-b09e-14fec1136821,javaHome=C:\Users\Glroy\.jdks\corretto-1.8.0_382,daemonRegistryDir=C:\Users\Glroy\Documents\scaffold\gradle\wrapper\daemon,pid=14680,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=GBK,-Duser.country=CN,-Duser.language=zh,-Duser.variant]
+2023-10-27T21:05:46.941+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2023-10-27T21:05:46.943+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2023-10-27T21:05:46.947+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2023-10-27T21:05:46.947+1100 [LIFECYCLE] [org.gradle.launcher.daemon.server.Daemon] Daemon server started.
+2023-10-27T21:05:46.947+1100 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonStartupCommunication] Completed writing the daemon greeting. Closing streams...
+2023-10-27T21:05:46.953+1100 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stopOnExpiration() called on daemon
+2023-10-27T21:05:46.954+1100 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] awaitExpiration() called on daemon
+2023-10-27T21:05:46.954+1100 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2023-10-27T21:05:46.956+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /127.0.0.1:14904 to /127.0.0.1:14903.
+2023-10-27T21:05:47.007+1100 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 26: received class org.gradle.launcher.daemon.protocol.Build
+2023-10-27T21:05:47.007+1100 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 26: Received non-IO message from client: Build{id=cca863c8-0053-42d4-a77d-feb53d88a7e7, currentDir=C:\Users\Glroy\Documents\scaffold}
+2023-10-27T21:05:47.008+1100 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: Build{id=cca863c8-0053-42d4-a77d-feb53d88a7e7, currentDir=C:\Users\Glroy\Documents\scaffold}.
+2023-10-27T21:05:47.008+1100 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: Build{id=cca863c8-0053-42d4-a77d-feb53d88a7e7, currentDir=C:\Users\Glroy\Documents\scaffold} with connection: socket connection from /127.0.0.1:14903 to /127.0.0.1:14904.
+2023-10-27T21:05:47.010+1100 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = Build{id=cca863c8-0053-42d4-a77d-feb53d88a7e7, currentDir=C:\Users\Glroy\Documents\scaffold}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:14903 to /127.0.0.1:14904] after 0.0 minutes of idle
+2023-10-27T21:05:47.010+1100 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as busy, address: [e90147c8-8b89-44cb-b6ac-e4ba7743b8fa port:14903, addresses:[localhost/127.0.0.1]]
+2023-10-27T21:05:47.010+1100 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [e90147c8-8b89-44cb-b6ac-e4ba7743b8fa port:14903, addresses:[localhost/127.0.0.1]]
+2023-10-27T21:05:47.011+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2023-10-27T21:05:47.012+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2023-10-27T21:05:47.014+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2023-10-27T21:05:47.015+1100 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+2023-10-27T21:05:47.015+1100 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2023-10-27T21:05:47.019+1100 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building Build{id=cca863c8-0053-42d4-a77d-feb53d88a7e7, currentDir=C:\Users\Glroy\Documents\scaffold}. Dispatching build started information...
+2023-10-27T21:05:47.019+1100 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 28: dispatching org.gradle.launcher.daemon.protocol.BuildStarted@5459dfb8
+2023-10-27T21:05:47.025+1100 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: [USERDOMAIN_ROAMINGPROFILE, RG_UNIVERSE_FRAMEWORK_RESOURCEDIR, PROCESSOR_LEVEL, SESSIONNAME, ALLUSERSPROFILE, INTEL_DEV_REDIST, PROCESSOR_ARCHITECTURE, MIC_LD_LIBRARY_PATH, PSModulePath, SystemDrive, ACSvcPort, USERNAME, ProgramFiles(x86), ACSetupSvcPort, PATHEXT, DriverData, IntelliJ IDEA Community Edition, ProgramData, ProgramW6432, HOMEPATH, PROCESSOR_IDENTIFIER, ProgramFiles, PUBLIC, windir, =::, OneDriveCommercial, LOCALAPPDATA, IntelliJ IDEA, USERDOMAIN, LOGONSERVER, JAVA_HOME, RlsSvcPort, OneDrive, APPDATA, CommonProgramFiles, Path, OS, COMPUTERNAME, PROCESSOR_REVISION, CommonProgramW6432, ComSpec, TEMP, SystemRoot, HOMEDRIVE, USERPROFILE, TMP, CommonProgramFiles(x86), NUMBER_OF_PROCESSORS, RG_GPU_FRAMEWORK_ENGINE_RESOURCEDIR, IDEA_INITIAL_DIRECTORY]
+2023-10-27T21:05:47.031+1100 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+2023-10-27T21:05:47.031+1100 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 14680). The daemon log file: C:\Users\Glroy\Documents\scaffold\gradle\wrapper\daemon\8.2\daemon-14680.out.log
+2023-10-27T21:05:47.033+1100 [INFO] [org.gradle.launcher.daemon.server.exec.LogAndCheckHealth] Starting build in new daemon [memory: 455.5 MiB]
+2023-10-27T21:05:47.035+1100 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+2023-10-27T21:05:47.035+1100 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=f273e8c6-1ff1-4077-b09e-14fec1136821,javaHome=C:\Users\Glroy\.jdks\corretto-1.8.0_382,daemonRegistryDir=C:\Users\Glroy\Documents\scaffold\gradle\wrapper\daemon,pid=14680,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=GBK,-Duser.country=CN,-Duser.language=zh,-Duser.variant]
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:115: 错误: 无法将类 WizardTD.Monster中的构造器 Monster应用到给定类型;
+    public App() {
+                 ^
+  需要: float,int,float,int,int,java.lang.String
+  找到: 没有参数
+  原因: 实际参数列表和形式参数列表长度不同
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:122: 错误: 方法不会覆盖或实现超类型的方法
+	@Override
+	^
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:124: 错误: 找不到符号
+        size(WIDTH, HEIGHT);
+        ^
+  符号:   方法 size(int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:129: 错误: 方法不会覆盖或实现超类型的方法
+	@Override
+	^
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:132: 错误: 找不到符号
+            frameRate(FPS);
+            ^
+  符号:   方法 frameRate(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:133: 错误: 找不到符号
+            this.jsonObject = loadJSONObject(this.configPath);
+                              ^
+  符号:   方法 loadJSONObject(java.lang.String)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:134: 错误: 找不到符号
+            deathImages.add(loadImage("src/main/resources/WizardTD/gremlin1.png"));
+                            ^
+  符号:   方法 loadImage(java.lang.String)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:135: 错误: 找不到符号
+            deathImages.add(loadImage("src/main/resources/WizardTD/gremlin2.png"));
+                            ^
+  符号:   方法 loadImage(java.lang.String)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:136: 错误: 找不到符号
+            deathImages.add(loadImage("src/main/resources/WizardTD/gremlin3.png"));
+                            ^
+  符号:   方法 loadImage(java.lang.String)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:137: 错误: 找不到符号
+            deathImages.add(loadImage("src/main/resources/WizardTD/gremlin4.png"));
+                            ^
+  符号:   方法 loadImage(java.lang.String)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:138: 错误: 找不到符号
+            towerImages.add(loadImage("src/main/resources/WizardTD/tower0.png"));
+                            ^
+  符号:   方法 loadImage(java.lang.String)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:139: 错误: 找不到符号
+            towerImages.add(loadImage("src/main/resources/WizardTD/tower1.png"));
+                            ^
+  符号:   方法 loadImage(java.lang.String)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:140: 错误: 找不到符号
+            towerImages.add(loadImage("src/main/resources/WizardTD/tower2.png"));
+                            ^
+  符号:   方法 loadImage(java.lang.String)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:141: 错误: 找不到符号
+            grass=loadImage("src/main/resources/WizardTD/grass.png");
+                  ^
+  符号:   方法 loadImage(java.lang.String)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:142: 错误: 找不到符号
+            tree=loadImage("src/main/resources/WizardTD/shrub.png");
+                 ^
+  符号:   方法 loadImage(java.lang.String)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:143: 错误: 找不到符号
+            road1=loadImage("src/main/resources/WizardTD/path0.png");
+                  ^
+  符号:   方法 loadImage(java.lang.String)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:144: 错误: 找不到符号
+            road2=loadImage("src/main/resources/WizardTD/path1.png");
+                  ^
+  符号:   方法 loadImage(java.lang.String)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:145: 错误: 找不到符号
+            road3=loadImage("src/main/resources/WizardTD/path2.png");
+                  ^
+  符号:   方法 loadImage(java.lang.String)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:146: 错误: 找不到符号
+            road4=loadImage("src/main/resources/WizardTD/path3.png");
+                  ^
+  符号:   方法 loadImage(java.lang.String)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:147: 错误: 找不到符号
+            house=loadImage("src/main/resources/WizardTD/wizard_house.png");
+                  ^
+  符号:   方法 loadImage(java.lang.String)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:148: 错误: 找不到符号
+            gremlin=loadImage("src/main/resources/WizardTD/gremlin.png");
+                    ^
+  符号:   方法 loadImage(java.lang.String)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:149: 错误: 找不到符号
+            beetle=loadImage("src/main/resources/WizardTD/beetle.png");
+                   ^
+  符号:   方法 loadImage(java.lang.String)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:150: 错误: 找不到符号
+            worm=loadImage("src/main/resources/WizardTD/worm.png");
+                 ^
+  符号:   方法 loadImage(java.lang.String)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:151: 错误: 找不到符号
+            fireball=loadImage("src/main/resources/WizardTD/fireball.png");
+                     ^
+  符号:   方法 loadImage(java.lang.String)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:204: 错误: 找不到符号
+            path=WizardTD.MonsterPathfinder.main(args);
+                                                 ^
+  符号:   变量 args
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:219: 错误: 方法不会覆盖或实现超类型的方法
+	@Override
+	^
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:257: 错误: 方法不会覆盖或实现超类型的方法
+	@Override
+	^
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:261: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:265: 错误: 找不到符号
+        mousePressed=true;
+        ^
+  符号:   变量 mousePressed
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:269: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:303: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:309: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:317: 错误: 方法不会覆盖或实现超类型的方法
+	@Override
+	^
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:329: 错误: 找不到符号
+        noStroke();
+        ^
+  符号:   方法 noStroke()
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:330: 错误: 找不到符号
+        fill(255);
+        ^
+  符号:   方法 fill(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:331: 错误: 找不到符号
+        rect(0,0,WIDTH,HEIGHT);
+        ^
+  符号:   方法 rect(int,int,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:337: 错误: 找不到符号
+            fill(255,0,255);
+            ^
+  符号:   方法 fill(int,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:338: 错误: 找不到符号
+            textSize(30);
+            ^
+  符号:   方法 textSize(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:339: 错误: 找不到符号
+            stroke(3);
+            ^
+  符号:   方法 stroke(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:340: 错误: 找不到符号
+            text("YOU WIN", 300, 300);
+            ^
+  符号:   方法 text(java.lang.String,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:341: 错误: 找不到符号
+            textSize(15);
+            ^
+  符号:   方法 textSize(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:342: 错误: 找不到符号
+            text("Press 'E' to the next level", 300, 350);
+            ^
+  符号:   方法 text(java.lang.String,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:359: 错误: 找不到符号
+                    stroke(255,255,0);
+                    ^
+  符号:   方法 stroke(int,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:360: 错误: 找不到符号
+                    strokeWeight(1);
+                    ^
+  符号:   方法 strokeWeight(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:361: 错误: 找不到符号
+                    noFill(); 
+                    ^
+  符号:   方法 noFill()
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:362: 错误: 找不到符号
+                    ellipse((towerList.get(x).getTowerX()+15), (towerList.get(x).getTowerY()+15), towerList.get(x).getDamagerange()*32*2, towerList.get(x).getDamagerange()*32*2);
+                    ^
+  符号:   方法 ellipse(int,int,float,float)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:388: 错误: 找不到符号
+        noStroke();
+        ^
+  符号:   方法 noStroke()
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:389: 错误: 找不到符号
+        fill(131,111,75); 
+        ^
+  符号:   方法 fill(int,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:390: 错误: 找不到符号
+        rect(0, 0, 640, 40); 
+        ^
+  符号:   方法 rect(int,int,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:391: 错误: 找不到符号
+        fill(131,111,75);
+        ^
+  符号:   方法 fill(int,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:392: 错误: 找不到符号
+        rect(640, 0, 120, 680);
+        ^
+  符号:   方法 rect(int,int,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:401: 错误: 找不到符号
+                    image(house, x * CELLSIZE - 8, y * CELLSIZE + TOPBAR - 8);
+                    ^
+  符号:   方法 image(processing.core.PImage,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:415: 错误: 找不到符号
+        stroke(0);
+        ^
+  符号:   方法 stroke(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:416: 错误: 找不到符号
+        strokeWeight(2);
+        ^
+  符号:   方法 strokeWeight(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:417: 错误: 找不到符号
+        fill(255);
+        ^
+  符号:   方法 fill(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:418: 错误: 找不到符号
+        rect(400,10,300,20);
+        ^
+  符号:   方法 rect(int,int,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:420: 错误: 找不到符号
+        fill(4,208,214);
+        ^
+  符号:   方法 fill(int,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:424: 错误: 找不到符号
+            rect(400,10,intmana,20);
+            ^
+  符号:   方法 rect(int,int,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:426: 错误: 找不到符号
+            rect(400,10,300,20);
+            ^
+  符号:   方法 rect(int,int,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:429: 错误: 找不到符号
+        fill(0);
+        ^
+  符号:   方法 fill(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:430: 错误: 找不到符号
+        textSize(20);
+        ^
+  符号:   方法 textSize(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:431: 错误: 找不到符号
+        stroke(3);
+        ^
+  符号:   方法 stroke(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:433: 错误: 找不到符号
+        text(infoString,500,28);
+        ^
+  符号:   方法 text(java.lang.String,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:438: 错误: 找不到符号
+        fill(255, 255, 0);
+        ^
+  符号:   方法 fill(int,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:439: 错误: 找不到符号
+        rect(649, 41 + 60 * i, 41, 41);
+        ^
+  符号:   方法 rect(int,int,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:440: 错误: 找不到符号
+        fill(0);
+        ^
+  符号:   方法 fill(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:441: 错误: 找不到符号
+        textSize(25);
+        ^
+  符号:   方法 textSize(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:442: 错误: 找不到符号
+        text(text, 655, 70 + 60 * i);
+        ^
+  符号:   方法 text(java.lang.String,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:445: 错误: 找不到符号
+        fill(128, 128, 128);
+        ^
+  符号:   方法 fill(int,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:446: 错误: 找不到符号
+        rect(649, 41 + 60 * i, 41, 41);
+        ^
+  符号:   方法 rect(int,int,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:447: 错误: 找不到符号
+        fill(0);
+        ^
+  符号:   方法 fill(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:448: 错误: 找不到符号
+        textSize(25);
+        ^
+  符号:   方法 textSize(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:449: 错误: 找不到符号
+        text(text, 655, 70 + 60 * i);
+        ^
+  符号:   方法 text(java.lang.String,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:535: 错误: 找不到符号
+                fill(128, 128, 128);
+                ^
+  符号:   方法 fill(int,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:536: 错误: 找不到符号
+                rect(649, 41, 41, 41);
+                ^
+  符号:   方法 rect(int,int,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:537: 错误: 找不到符号
+                fill(0);
+                ^
+  符号:   方法 fill(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:538: 错误: 找不到符号
+                textSize(25);
+                ^
+  符号:   方法 textSize(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:539: 错误: 找不到符号
+                text("FF", 655, 70);
+                ^
+  符号:   方法 text(java.lang.String,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:546: 错误: 找不到符号
+                fill(128, 128, 128);
+                ^
+  符号:   方法 fill(int,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:547: 错误: 找不到符号
+                rect(649, 41 + 60 * 2, 41, 41);
+                ^
+  符号:   方法 rect(int,int,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:548: 错误: 找不到符号
+                fill(0);
+                ^
+  符号:   方法 fill(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:549: 错误: 找不到符号
+                textSize(25);
+                ^
+  符号:   方法 textSize(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:550: 错误: 找不到符号
+                text("T", 655, 70 + 60 * 2);
+                ^
+  符号:   方法 text(java.lang.String,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:551: 错误: 找不到符号
+                stroke(0);
+                ^
+  符号:   方法 stroke(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:552: 错误: 找不到符号
+                fill(255);
+                ^
+  符号:   方法 fill(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:553: 错误: 找不到符号
+                rect(593, (41 + 60 * 2), 50, 20);
+                ^
+  符号:   方法 rect(int,int,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:554: 错误: 找不到符号
+                fill(0);
+                ^
+  符号:   方法 fill(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:555: 错误: 找不到符号
+                textSize(10);
+                ^
+  符号:   方法 textSize(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:568: 错误: 找不到符号
+                text("Cost: " + (cost), 595, 55 + 60 * 2);
+                ^
+  符号:   方法 text(java.lang.String,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:569: 错误: 找不到符号
+                noStroke();
+                ^
+  符号:   方法 noStroke()
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:578: 错误: 找不到符号
+                stroke(0);
+                ^
+  符号:   方法 stroke(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:579: 错误: 找不到符号
+                fill(255);
+                ^
+  符号:   方法 fill(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:580: 错误: 找不到符号
+                rect(593, (41 + 60 * 2), 50, 20);
+                ^
+  符号:   方法 rect(int,int,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:581: 错误: 找不到符号
+                fill(0);
+                ^
+  符号:   方法 fill(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:582: 错误: 找不到符号
+                textSize(10);
+                ^
+  符号:   方法 textSize(int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:595: 错误: 找不到符号
+                text("Cost: " + (cost), 595, 55 + 60 * 2);
+                ^
+  符号:   方法 text(java.lang.String,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:596: 错误: 找不到符号
+                noStroke();
+                ^
+  符号:   方法 noStroke()
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:605: 错误: 找不到符号
+                fill(128, 128, 128);
+                ^
+  符号:   方法 fill(int,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:606: 错误: 找不到符号
+                rect(649, 41 + 60 * 1, 41, 41);
+                ^
+  符号:   方法 rect(int,int,int,int)
+  位置: 类 WizardTD.App
+C:\Users\Glroy\Documents\scaffold\src\main\java\WizardTD\App.java:607: 错误: 找不到符号
+                fill(0);
+                ^
+  符号:   方法 fill(int)
+  位置: 类 WizardTD.App
+100 个错误
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 7s
+1 actionable task: 1 executed
+2023-10-27T21:05:50.952+1100 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has finished executing the build.
+2023-10-27T21:05:50.962+1100 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2023-10-27T21:05:50.963+1100 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: finished waiting for DaemonCommandExecution[command = Build{id=cca863c8-0053-42d4-a77d-feb53d88a7e7, currentDir=C:\Users\Glroy\Documents\scaffold}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:14903 to /127.0.0.1:14904]. Result org.gradle.launcher.daemon.server.DaemonStateCoordinator@4e6a73c9 with state Busy
+2023-10-27T21:05:50.963+1100 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: completed DaemonCommandExecution[command = Build{id=cca863c8-0053-42d4-a77d-feb53d88a7e7, currentDir=C:\Users\Glroy\Documents\scaffold}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:14903 to /127.0.0.1:14904]
+2023-10-27T21:05:50.963+1100 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+2023-10-27T21:05:50.963+1100 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as idle, address: [e90147c8-8b89-44cb-b6ac-e4ba7743b8fa port:14903, addresses:[localhost/127.0.0.1]]
+2023-10-27T21:05:50.963+1100 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [e90147c8-8b89-44cb-b6ac-e4ba7743b8fa port:14903, addresses:[localhost/127.0.0.1]]
+2023-10-27T21:05:50.969+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2023-10-27T21:05:50.971+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2023-10-27T21:05:50.972+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2023-10-27T21:05:50.973+1100 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2023-10-27T21:05:50.973+1100 [DEBUG] [org.gradle.launcher.daemon.server.exec.ReturnResult] Daemon is dispatching the build result: Success[value=org.gradle.launcher.exec.BuildActionResult@797281d6]
+2023-10-27T21:05:50.973+1100 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 25: dispatching Success[value=org.gradle.launcher.exec.BuildActionResult@797281d6]
+2023-10-27T21:05:50.978+1100 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Finishing executing command: Build{id=cca863c8-0053-42d4-a77d-feb53d88a7e7, currentDir=C:\Users\Glroy\Documents\scaffold}
+2023-10-27T21:05:50.986+1100 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 26: received class org.gradle.launcher.daemon.protocol.CloseInput
+2023-10-27T21:05:50.986+1100 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 26: Received IO message from client: org.gradle.launcher.daemon.protocol.CloseInput@fe65549
+2023-10-27T21:05:50.986+1100 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 26: received class org.gradle.launcher.daemon.protocol.Finished
+2023-10-27T21:05:50.986+1100 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 26: Received non-IO message from client: org.gradle.launcher.daemon.protocol.Finished@490179f1
+2023-10-27T21:05:50.986+1100 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received finished message: org.gradle.launcher.daemon.protocol.Finished@490179f1
+2023-10-27T21:05:50.986+1100 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 25: stopping connection
+2023-10-27T21:05:50.986+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.SocketConnection] Discarding EOFException: java.io.EOFException
+2023-10-27T21:05:50.987+1100 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 26: received null
+2023-10-27T21:05:50.987+1100 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 26: Received end-of-input from client.
+2023-10-27T21:05:50.988+1100 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 25: stopping connection
+2023-10-27T21:05:56.958+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2023-10-27T21:05:56.958+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2023-10-27T21:05:56.958+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2023-10-27T21:05:56.959+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2023-10-27T21:05:56.960+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2023-10-27T21:05:56.960+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2023-10-27T21:06:06.958+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2023-10-27T21:06:06.958+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2023-10-27T21:06:06.958+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2023-10-27T21:06:06.960+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2023-10-27T21:06:06.960+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2023-10-27T21:06:06.960+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2023-10-27T21:06:06.961+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2023-10-27T21:06:06.961+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2023-10-27T21:06:06.961+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2023-10-27T21:06:16.958+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2023-10-27T21:06:16.958+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2023-10-27T21:06:16.959+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2023-10-27T21:06:16.960+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2023-10-27T21:06:16.960+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2023-10-27T21:06:16.960+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2023-10-27T21:06:16.961+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2023-10-27T21:06:16.961+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2023-10-27T21:06:16.961+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2023-10-27T21:06:26.957+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2023-10-27T21:06:26.958+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2023-10-27T21:06:26.958+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2023-10-27T21:06:26.959+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2023-10-27T21:06:26.959+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2023-10-27T21:06:26.959+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2023-10-27T21:06:26.960+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2023-10-27T21:06:26.960+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2023-10-27T21:06:26.960+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2023-10-27T21:06:36.957+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2023-10-27T21:06:36.957+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2023-10-27T21:06:36.957+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2023-10-27T21:06:36.959+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2023-10-27T21:06:36.959+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2023-10-27T21:06:36.959+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2023-10-27T21:06:36.960+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2023-10-27T21:06:36.960+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2023-10-27T21:06:36.960+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2023-10-27T21:06:46.956+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2023-10-27T21:06:46.956+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2023-10-27T21:06:46.956+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2023-10-27T21:06:46.957+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2023-10-27T21:06:46.957+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2023-10-27T21:06:46.958+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2023-10-27T21:06:46.958+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2023-10-27T21:06:46.958+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2023-10-27T21:06:46.958+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2023-10-27T21:06:56.957+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2023-10-27T21:06:56.957+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2023-10-27T21:06:56.958+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2023-10-27T21:06:56.966+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2023-10-27T21:06:56.966+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2023-10-27T21:06:56.967+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2023-10-27T21:06:56.967+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2023-10-27T21:06:56.967+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2023-10-27T21:06:56.967+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2023-10-27T21:07:06.905+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /127.0.0.1:14947 to /127.0.0.1:14903.
+2023-10-27T21:07:06.914+1100 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 105: received class org.gradle.launcher.daemon.protocol.StopWhenIdle
+2023-10-27T21:07:06.914+1100 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 105: Received non-IO message from client: StopWhenIdle[id=c4aaf32a-8b95-4c22-bc65-c8afa9aedf92]
+2023-10-27T21:07:06.914+1100 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: StopWhenIdle[id=c4aaf32a-8b95-4c22-bc65-c8afa9aedf92].
+2023-10-27T21:07:06.914+1100 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: StopWhenIdle[id=c4aaf32a-8b95-4c22-bc65-c8afa9aedf92] with connection: socket connection from /127.0.0.1:14903 to /127.0.0.1:14947.
+2023-10-27T21:07:06.914+1100 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Storing daemon stop event: stop command received
+2023-10-27T21:07:06.914+1100 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon stop event with timestamp 1698401226915
+2023-10-27T21:07:06.916+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2023-10-27T21:07:06.917+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2023-10-27T21:07:06.918+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2023-10-27T21:07:06.918+1100 [LIFECYCLE] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Daemon will be stopped at the end of the build stop command received
+2023-10-27T21:07:06.918+1100 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Marking daemon stopped due to stop command received. The daemon is running a build: false
+2023-10-27T21:07:06.918+1100 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon has stopped.
+2023-10-27T21:07:06.918+1100 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 104: dispatching Success[value=null]
+2023-10-27T21:07:06.918+1100 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stop() called on daemon
+2023-10-27T21:07:06.918+1100 [INFO] [org.gradle.launcher.daemon.server.Daemon] Stop requested. Daemon is removing its presence from the registry...
+2023-10-27T21:07:06.918+1100 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Finishing executing command: StopWhenIdle[id=c4aaf32a-8b95-4c22-bc65-c8afa9aedf92]
+2023-10-27T21:07:06.918+1100 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Removing our presence to clients, eg. removing this address from the registry: [e90147c8-8b89-44cb-b6ac-e4ba7743b8fa port:14903, addresses:[localhost/127.0.0.1]]
+2023-10-27T21:07:06.918+1100 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 105: received class org.gradle.launcher.daemon.protocol.Finished
+2023-10-27T21:07:06.918+1100 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Removing daemon address: [e90147c8-8b89-44cb-b6ac-e4ba7743b8fa port:14903, addresses:[localhost/127.0.0.1]]
+2023-10-27T21:07:06.918+1100 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 105: Received non-IO message from client: org.gradle.launcher.daemon.protocol.Finished@1236abb6
+2023-10-27T21:07:06.919+1100 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received finished message: org.gradle.launcher.daemon.protocol.Finished@1236abb6
+2023-10-27T21:07:06.919+1100 [DEBUG] [org.gradle.internal.remote.internal.inet.SocketConnection] Discarding EOFException: java.io.EOFException
+2023-10-27T21:07:06.919+1100 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 104: stopping connection
+2023-10-27T21:07:06.919+1100 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 105: received null
+2023-10-27T21:07:06.919+1100 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 105: Received end-of-input from client.
+2023-10-27T21:07:06.920+1100 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 104: stopping connection
+2023-10-27T21:07:06.920+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2023-10-27T21:07:06.920+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2023-10-27T21:07:06.921+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2023-10-27T21:07:06.921+1100 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Address removed from registry.
+2023-10-27T21:07:06.922+1100 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for jars (C:\Users\Glroy\Documents\scaffold\gradle\wrapper\caches\jars-9)
+2023-10-27T21:07:06.922+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on jars (C:\Users\Glroy\Documents\scaffold\gradle\wrapper\caches\jars-9).
+2023-10-27T21:07:06.924+1100 [DEBUG] [org.gradle.cache.internal.DefaultPersistentDirectoryStore] jars (C:\Users\Glroy\Documents\scaffold\gradle\wrapper\caches\jars-9) has last been fully cleaned up 4 hours ago
+2023-10-27T21:07:06.924+1100 [DEBUG] [org.gradle.cache.internal.DefaultPersistentDirectoryStore] Artifact transforms cache (C:\Users\Glroy\Documents\scaffold\gradle\wrapper\caches\transforms-3) has last been fully cleaned up 4 hours ago
+2023-10-27T21:07:06.925+1100 [DEBUG] [org.gradle.cache.internal.DefaultCacheCoordinator] Cache Artifact transforms cache (C:\Users\Glroy\Documents\scaffold\gradle\wrapper\caches\transforms-3) was closed 0 times.
+2023-10-27T21:07:06.926+1100 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for file content cache (C:\Users\Glroy\Documents\scaffold\gradle\wrapper\caches\8.2\fileContent)
+2023-10-27T21:07:06.926+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on file content cache (C:\Users\Glroy\Documents\scaffold\gradle\wrapper\caches\8.2\fileContent).
+2023-10-27T21:07:06.926+1100 [DEBUG] [org.gradle.internal.watch.vfs.impl.WatchingVirtualFileSystem] Closing VFS, dropping state
+2023-10-27T21:07:06.927+1100 [DEBUG] [org.gradle.cache.internal.DefaultCacheCoordinator] Cache Generated Gradle JARs cache (C:\Users\Glroy\Documents\scaffold\gradle\wrapper\caches\8.2\generated-gradle-jars) was closed 0 times.
+2023-10-27T21:07:06.927+1100 [DEBUG] [org.gradle.internal.watch.registry.impl.DefaultFileWatcherRegistry] Finished listening to file system change events
+2023-10-27T21:07:06.927+1100 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for artifact cache (C:\Users\Glroy\Documents\scaffold\gradle\wrapper\caches\modules-2)
+2023-10-27T21:07:06.927+1100 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache module-artifact.bin (C:\Users\Glroy\Documents\scaffold\gradle\wrapper\caches\modules-2\metadata-2.106\module-artifact.bin)
+2023-10-27T21:07:06.928+1100 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache module-metadata.bin (C:\Users\Glroy\Documents\scaffold\gradle\wrapper\caches\modules-2\metadata-2.106\module-metadata.bin)
+2023-10-27T21:07:06.928+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on artifact cache (C:\Users\Glroy\Documents\scaffold\gradle\wrapper\caches\modules-2).
+2023-10-27T21:07:06.929+1100 [DEBUG] [org.gradle.cache.internal.DefaultPersistentDirectoryStore] artifact cache (C:\Users\Glroy\Documents\scaffold\gradle\wrapper\caches\modules-2) has last been fully cleaned up 4 hours ago
+2023-10-27T21:07:06.929+1100 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for journal cache (C:\Users\Glroy\Documents\scaffold\gradle\wrapper\caches\journal-1)
+2023-10-27T21:07:06.929+1100 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache file-access.bin (C:\Users\Glroy\Documents\scaffold\gradle\wrapper\caches\journal-1\file-access.bin)
+2023-10-27T21:07:06.930+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on journal cache (C:\Users\Glroy\Documents\scaffold\gradle\wrapper\caches\journal-1).
+2023-10-27T21:07:06.930+1100 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for file hash cache (C:\Users\Glroy\Documents\scaffold\gradle\wrapper\caches\8.2\fileHashes)
+2023-10-27T21:07:06.930+1100 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache fileHashes.bin (C:\Users\Glroy\Documents\scaffold\gradle\wrapper\caches\8.2\fileHashes\fileHashes.bin)
+2023-10-27T21:07:06.930+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on file hash cache (C:\Users\Glroy\Documents\scaffold\gradle\wrapper\caches\8.2\fileHashes).
+2023-10-27T21:07:06.931+1100 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for execution history cache (C:\Users\Glroy\Documents\scaffold\gradle\wrapper\caches\8.2\executionHistory)
+2023-10-27T21:07:06.931+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on execution history cache (C:\Users\Glroy\Documents\scaffold\gradle\wrapper\caches\8.2\executionHistory).
+2023-10-27T21:07:06.931+1100 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for Java compile cache (C:\Users\Glroy\Documents\scaffold\gradle\wrapper\caches\8.2\javaCompile)
+2023-10-27T21:07:06.931+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on Java compile cache (C:\Users\Glroy\Documents\scaffold\gradle\wrapper\caches\8.2\javaCompile).
+Daemon vm is shutting down... The daemon has exited normally or was terminated in response to a user interrupt.
+2023-10-27T21:07:06.933+1100 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Removing daemon address: [e90147c8-8b89-44cb-b6ac-e4ba7743b8fa port:14903, addresses:[localhost/127.0.0.1]]
+2023-10-27T21:07:06.934+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2023-10-27T21:07:06.934+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2023-10-27T21:07:06.935+1100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.

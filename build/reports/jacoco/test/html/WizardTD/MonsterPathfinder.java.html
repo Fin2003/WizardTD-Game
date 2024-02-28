@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MonsterPathfinder.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">scaffold</a> &gt; <a href="index.source.html" class="el_package">WizardTD</a> &gt; <span class="el_source">MonsterPathfinder.java</span></div><h1>MonsterPathfinder.java</h1><pre class="source lang-java linenums">package WizardTD;
+
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+import java.util.Stack;
+
+import WizardTD.App;
+
+<span class="fc" id="L14">public class MonsterPathfinder {</span>
+    private static final char START = 'X';
+    private static final char TARGET = 'W';
+    private static final char WALL = 'S';
+    private static final char WALL2 = ' ';
+<span class="fc" id="L19">    public static List path = new ArrayList();</span>
+<span class="fc" id="L20">    List&lt;Point&gt; pointpath = new ArrayList&lt;&gt;();</span>
+    public static int difficult;
+
+
+    public static List main(String[] args) {
+<span class="fc" id="L25">        List&lt;List&lt;Point&gt;&gt; allPaths = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L26">        difficult = 0;</span>
+<span class="fc" id="L27">        String struct = App.struct;</span>
+<span class="fc" id="L28">        String[] map = struct.split(&quot;\n&quot;);</span>
+<span class="fc" id="L29">        List&lt;Point&gt; startPoints = findEdgeStartPoints(map, difficult);</span>
+
+<span class="fc bfc" id="L31" title="All 2 branches covered.">        for (Point startPoint : startPoints) {</span>
+<span class="fc" id="L32">            List&lt;Point&gt; path = findPath(map, startPoint);</span>
+<span class="pc bpc" id="L33" title="1 of 2 branches missed.">            if (path != null) {</span>
+<span class="fc" id="L34">                allPaths.add(path);</span>
+            }
+<span class="fc" id="L36">        }</span>
+
+<span class="fc" id="L38">        return allPaths;</span>
+    }
+
+    // find the start points on the map
+    public static List&lt;Point&gt; findEdgeStartPoints(String[] map,int difficult) {
+<span class="fc" id="L43">        List&lt;Point&gt; startPoints = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L44">        int rows = 20;</span>
+<span class="fc" id="L45">        int cols = 20;</span>
+            try{
+<span class="pc bpc" id="L47" title="1 of 2 branches missed.">            for (int i = 0; i &lt; rows; i++) {</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">                for (int j = 0; j &lt; cols; j++) {</span>
+<span class="pc bpc" id="L49" title="1 of 8 branches missed.">                    if (j==0 || j==cols-1 ||i==0 || i==rows-1){</span>
+<span class="fc" id="L50">                        char currentChar = map[i].charAt(j);</span>
+                        // 濡傛灉褰撳墠瀛楃鏄� 'X'锛屽垯妫�鏌ヤ笂銆佷笅銆佸乏銆佸彸鍥涗釜鏂瑰悜鐨勫瓧绗�
+<span class="fc bfc" id="L52" title="All 2 branches covered.">                        if (currentChar == START) {</span>
+<span class="pc bpc" id="L53" title="1 of 4 branches missed.">                            boolean isXUp = (i &gt; 0 &amp;&amp; map[i - 1].charAt(j) == 'X');</span>
+<span class="pc bpc" id="L54" title="1 of 4 branches missed.">                            boolean isXDown = (i &lt; rows - 1 &amp;&amp; map[i + 1].charAt(j) == 'X');</span>
+<span class="fc bfc" id="L55" title="All 4 branches covered.">                            boolean isXLeft = (j &gt; 0 &amp;&amp; map[i].charAt(j - 1) == 'X');</span>
+<span class="fc bfc" id="L56" title="All 4 branches covered.">                            boolean isXRight = (j &lt; cols - 1 &amp;&amp; map[i].charAt(j + 1) == 'X');</span>
+<span class="fc" id="L57">                            int falsecount=0;</span>
+<span class="pc bpc" id="L58" title="1 of 2 branches missed.">                            if (!isXUp) {</span>
+<span class="fc" id="L59">                                falsecount++;</span>
+                            }
+<span class="fc bfc" id="L61" title="All 2 branches covered.">                            if (!isXDown) {</span>
+<span class="fc" id="L62">                                falsecount++;</span>
+                            }
+<span class="fc bfc" id="L64" title="All 2 branches covered.">                            if (!isXLeft) {</span>
+<span class="fc" id="L65">                                falsecount++;</span>
+                            }
+<span class="fc bfc" id="L67" title="All 2 branches covered.">                            if (!isXRight) {</span>
+<span class="fc" id="L68">                                falsecount++;</span>
+                            }
+<span class="pc bpc" id="L70" title="1 of 2 branches missed.">                            if (falsecount==3){</span>
+<span class="fc" id="L71">                                startPoints.add(new Point(j, i));</span>
+                            }
+                        }
+                    }
+                    
+                    
+                }
+        }
+<span class="fc" id="L79">            }catch (ArrayIndexOutOfBoundsException e) {</span>
+                
+<span class="fc" id="L81">            } catch (StringIndexOutOfBoundsException e) {</span>
+                    
+<span class="pc" id="L83">            }</span>
+
+        
+<span class="fc" id="L86">        return startPoints;</span>
+    }
+    
+
+
+    // find the path to the target
+    public static List&lt;Point&gt; findPath(String[] map, Point start) {
+        // copy the map to a temp map
+<span class="fc" id="L94">        String[] temp_map = Arrays.copyOf(map, map.length);</span>
+    
+<span class="fc" id="L96">        int rows = temp_map.length;</span>
+<span class="fc" id="L97">        int cols = temp_map[0].length();</span>
+<span class="fc" id="L98">        boolean[][] visited = new boolean[rows][cols];</span>
+<span class="fc" id="L99">        Stack&lt;Point&gt; stack = new Stack&lt;&gt;();</span>
+<span class="fc" id="L100">        stack.push(start);</span>
+    
+<span class="pc bpc" id="L102" title="1 of 2 branches missed.">        while (!stack.isEmpty()) {</span>
+<span class="fc" id="L103">            Point current = stack.peek();</span>
+<span class="fc" id="L104">            int x = current.x;</span>
+<span class="fc" id="L105">            int y = current.y;</span>
+    
+<span class="fc bfc" id="L107" title="All 2 branches covered.">            if (temp_map[y].charAt(x) == TARGET) {</span>
+<span class="fc" id="L108">                List&lt;Point&gt; path = reconstructPath(current);</span>
+                // 鍦ㄨ繖閲屽皢 x 鍜� y 鏀惧ぇ 32 鍊�
+<span class="fc bfc" id="L110" title="All 2 branches covered.">                for (Point point : path) {</span>
+<span class="fc" id="L111">                    point.x *= 32;</span>
+<span class="fc" id="L112">                    point.y *= 32;</span>
+<span class="fc" id="L113">                }</span>
+<span class="fc" id="L114">                return path;</span>
+            }
+    
+<span class="fc" id="L117">            visited[y][x] = true;</span>
+<span class="fc" id="L118">            boolean foundNextMove = false;</span>
+<span class="fc" id="L119">            int[] dx = {0, 0, 1, -1};</span>
+<span class="fc" id="L120">            int[] dy = {1, -1, 0, 0};</span>
+    
+            try {
+<span class="fc bfc" id="L123" title="All 2 branches covered.">                for (int i = 0; i &lt; 4; i++) {</span>
+<span class="fc" id="L124">                    int newX = x + dx[i];</span>
+<span class="fc" id="L125">                    int newY = y + dy[i];</span>
+<span class="fc bfc" id="L126" title="All 2 branches covered.">                    if (isValidMove(temp_map, newX, newY, visited)) {</span>
+<span class="fc" id="L127">                        Point next = new Point(newX, newY);</span>
+<span class="fc" id="L128">                        next.parent = current; // set parent</span>
+<span class="fc" id="L129">                        stack.push(next);</span>
+<span class="fc" id="L130">                        foundNextMove = true;</span>
+                    }
+                }
+<span class="fc bfc" id="L133" title="All 2 branches covered.">                if (!foundNextMove) {</span>
+                    // if no valid move, mark the current point as a dead end
+<span class="fc" id="L135">                    temp_map[y] = temp_map[y].substring(0, x) + WALL + temp_map[y].substring(x + 1);</span>
+<span class="fc" id="L136">                    stack.pop();</span>
+                }
+<span class="nc" id="L138">            } catch (ArrayIndexOutOfBoundsException e) {</span>
+<span class="nc" id="L139">                break;</span>
+<span class="nc" id="L140">            } catch (StringIndexOutOfBoundsException e) {</span>
+<span class="nc" id="L141">                break;</span>
+<span class="fc" id="L142">            }</span>
+<span class="fc" id="L143">        }</span>
+<span class="nc" id="L144">        return null; // path not found</span>
+    }
+    
+
+
+    // check the movement is valid or not
+    private static boolean isValidMove(String[] map, int x, int y, boolean[][] visited) {
+<span class="fc" id="L151">        int rows = map.length;</span>
+<span class="fc" id="L152">        int cols = map[0].length();</span>
+<span class="pc bpc" id="L153" title="2 of 14 branches missed.">        return x &gt;= 0 &amp;&amp; x &lt; cols &amp;&amp; y &gt;= 0 &amp;&amp; y &lt; rows &amp;&amp; !visited[y][x] &amp;&amp; map[y].charAt(x) != WALL&amp;&amp; map[y].charAt(x) != WALL2;</span>
+        //return  map[y].charAt(x) != WALL &amp;&amp; map[y].charAt(x) != WALL2 &amp;&amp; x &gt;= 0 &amp;&amp; x &lt; cols &amp;&amp; y &gt;= 0 &amp;&amp; y &lt; rows;
+    }
+
+
+
+
+    // generate the path from the target
+    public static List&lt;Point&gt; reconstructPath(Point target) {
+<span class="fc" id="L162">        List&lt;Point&gt; path = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L163">        Point current = target;</span>
+
+<span class="fc bfc" id="L165" title="All 2 branches covered.">        while (current != null) {</span>
+<span class="fc" id="L166">            path.add(current);</span>
+<span class="fc" id="L167">            current = current.parent;</span>
+        }
+
+<span class="fc" id="L170">        Collections.reverse(path);</span>
+<span class="fc" id="L171">        return path;</span>
+    }
+
+
+    // showing the point
+    public static class Point {
+        int x, y;
+        Point parent;
+
+<span class="fc" id="L180">        Point(int x, int y) {</span>
+<span class="fc" id="L181">            this.x = x;</span>
+<span class="fc" id="L182">            this.y = y;</span>
+<span class="fc" id="L183">        }</span>
+
+        @Override
+        public String toString() {
+<span class="fc" id="L187">            return &quot;(&quot; + x + &quot;, &quot; + y + &quot;)&quot;;</span>
+        }
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>
